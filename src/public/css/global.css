@@ -1,0 +1,892 @@
+.navbar-brand img{
+    width: 130px;
+    height: auto;
+}
+
+[class*="grid-cols-"] {
+    display: grid;
+}
+
+body{
+    background-image: url(../img/background.png);
+}
+nav.navbar{
+    display: flex;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.container {
+    padding-top: 90px;
+}
+
+.product-list-container{
+    grid-gap: 30px;
+    gap: 30px;
+}
+
+.product-card{
+    position: relative;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border: 1px solid #f3f3f3;
+    -webkit-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+}
+
+.product-card .product-image{
+    height: 310px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.product-card .product-image img{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.product-card .product-description {
+    padding: 30px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.product-card .product-description .product-title{
+    display: block;
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 10px;
+    -webkit-transition: 0.15s ease-in-out;
+    -o-transition: 0.15s ease-in-out;
+    transition: 0.15s ease-in-out;
+}
+
+.product-card .product-description .product-price{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.product-card .product-description .add-cart {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 115px;
+    z-index: 1;
+    -webkit-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    overflow: hidden;
+    margin-bottom: 0 !important;
+    width: 35px;
+    -webkit-box-shadow: 0 0 0px 1px #e6e6e6;
+    box-shadow: 0 0 0px 1px #e6e6e6;
+    display: inline-flex;
+    border-radius: 6px;
+}
+
+.product-card .product-description .add-cart > a{
+    color: #212121;
+    background-color: transparent;
+}
+
+.product-card .product-description .add-cart > a:hover{
+    background-color: #212121;
+    color: #FFF;
+}
+
+.product-card .product-description .add-cart > a > span {
+    width: 35px;
+    height: 35px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    /*-webkit-transition: 0.15s ease-in-out;
+    -o-transition: 0.15s ease-in-out;
+    transition: 0.15s ease-in-out;*/
+}
+
+ul.cart-list-products{
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+ul.cart-list-products > li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+ul.cart-list-products .cart-product img{
+    width: 60px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+ul.cart-list-products .cart-product .cart-product-info{
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+ul.cart-list-products .cart-product .cart-product-info .product-title{
+    display: block;
+    font-size: 13px;
+    color:#5a5a5a;
+    -webkit-transition: 0.15s ease-in-out;
+    -o-transition: 0.15s ease-in-out;
+    transition: 0.15s ease-in-out;
+    margin-bottom: 5px;
+}
+
+ul.cart-list-products .cart-product .cart-product-info .product-price{
+    display: block;
+    font-size: 13px;
+    color: #999999;
+    margin-bottom: 8px;
+}
+
+ul.cart-list-products .cart-product .cart-product-info .product-counter-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.cart-product-info .product-counter{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 10px;
+}
+
+.cart-product-info .product-counter .product-counter-value{
+    color: #fff;
+    background-color:#212121;
+    width: 45px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.cart-product-info .product-counter > span:nth-child(1),
+.cart-product-info .product-counter > span:nth-child(3){
+    width: 30px;
+    height: 30px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    color: #fff;
+    background-color: #212121;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-transition: 0.15s ease-in-out;
+    -o-transition: 0.15s ease-in-out;
+    transition: 0.15s ease-in-out;
+}
+
+.cart-product-info .product-counter .product-decrease{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+}
+.cart-product-info .product-counter .product-increment{
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+}
+
+.cart-product-info .product-total{
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+@media (min-width: 575px) {
+    .grid-cols-xs-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .col-span-xs-1 {
+      grid-column: span 1/span 1; }
+    .grid-cols-xs-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .col-span-xs-2 {
+      grid-column: span 2/span 2; }
+    .grid-cols-xs-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .col-span-xs-3 {
+      grid-column: span 3/span 3; }
+    .grid-cols-xs-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .col-span-xs-4 {
+      grid-column: span 4/span 4; }
+    .grid-cols-xs-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .col-span-xs-5 {
+      grid-column: span 5/span 5; }
+    .grid-cols-xs-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .col-span-xs-6 {
+      grid-column: span 6/span 6; }
+    .grid-cols-xs-7 {
+      grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .col-span-xs-7 {
+      grid-column: span 7/span 7; }
+    .grid-cols-xs-8 {
+      grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .col-span-xs-8 {
+      grid-column: span 8/span 8; }
+    .grid-cols-xs-9 {
+      grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .col-span-xs-9 {
+      grid-column: span 9/span 9; }
+    .grid-cols-xs-10 {
+      grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .col-span-xs-10 {
+      grid-column: span 10/span 10; }
+    .gap-xs-5 {
+      grid-gap: 5px;
+      gap: 5px; }
+    .row-gap-xs-5 {
+      row-gap: 5px; }
+    .column-gap-xs-5 {
+      -webkit-column-gap: 5px;
+         -moz-column-gap: 5px;
+              column-gap: 5px; }
+    .gap-xs-10 {
+      grid-gap: 10px;
+      gap: 10px; }
+    .row-gap-xs-10 {
+      row-gap: 10px; }
+    .column-gap-xs-10 {
+      -webkit-column-gap: 10px;
+         -moz-column-gap: 10px;
+              column-gap: 10px; }
+    .gap-xs-15 {
+      grid-gap: 15px;
+      gap: 15px; }
+    .row-gap-xs-15 {
+      row-gap: 15px; }
+    .column-gap-xs-15 {
+      -webkit-column-gap: 15px;
+         -moz-column-gap: 15px;
+              column-gap: 15px; }
+    .gap-xs-20 {
+      grid-gap: 20px;
+      gap: 20px; }
+    .row-gap-xs-20 {
+      row-gap: 20px; }
+    .column-gap-xs-20 {
+      -webkit-column-gap: 20px;
+         -moz-column-gap: 20px;
+              column-gap: 20px; }
+    .gap-xs-25 {
+      grid-gap: 25px;
+      gap: 25px; }
+    .row-gap-xs-25 {
+      row-gap: 25px; }
+    .column-gap-xs-25 {
+      -webkit-column-gap: 25px;
+         -moz-column-gap: 25px;
+              column-gap: 25px; }
+    .gap-xs-30 {
+      grid-gap: 30px;
+      gap: 30px; }
+    .row-gap-xs-30 {
+      row-gap: 30px; }
+    .column-gap-xs-30 {
+      -webkit-column-gap: 30px;
+         -moz-column-gap: 30px;
+              column-gap: 30px; } 
+}
+@media (min-width: 768px) {
+    .grid-cols-sm-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .col-span-sm-1 {
+      grid-column: span 1/span 1; }
+    .grid-cols-sm-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .col-span-sm-2 {
+      grid-column: span 2/span 2; }
+    .grid-cols-sm-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .col-span-sm-3 {
+      grid-column: span 3/span 3; }
+    .grid-cols-sm-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .col-span-sm-4 {
+      grid-column: span 4/span 4; }
+    .grid-cols-sm-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .col-span-sm-5 {
+      grid-column: span 5/span 5; }
+    .grid-cols-sm-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .col-span-sm-6 {
+      grid-column: span 6/span 6; }
+    .grid-cols-sm-7 {
+      grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .col-span-sm-7 {
+      grid-column: span 7/span 7; }
+    .grid-cols-sm-8 {
+      grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .col-span-sm-8 {
+      grid-column: span 8/span 8; }
+    .grid-cols-sm-9 {
+      grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .col-span-sm-9 {
+      grid-column: span 9/span 9; }
+    .grid-cols-sm-10 {
+      grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .col-span-sm-10 {
+      grid-column: span 10/span 10; }
+    .gap-sm-5 {
+      grid-gap: 5px;
+      gap: 5px; }
+    .row-gap-sm-5 {
+      row-gap: 5px; }
+    .column-gap-sm-5 {
+      -webkit-column-gap: 5px;
+         -moz-column-gap: 5px;
+              column-gap: 5px; }
+    .gap-sm-10 {
+      grid-gap: 10px;
+      gap: 10px; }
+    .row-gap-sm-10 {
+      row-gap: 10px; }
+    .column-gap-sm-10 {
+      -webkit-column-gap: 10px;
+         -moz-column-gap: 10px;
+              column-gap: 10px; }
+    .gap-sm-15 {
+      grid-gap: 15px;
+      gap: 15px; }
+    .row-gap-sm-15 {
+      row-gap: 15px; }
+    .column-gap-sm-15 {
+      -webkit-column-gap: 15px;
+         -moz-column-gap: 15px;
+              column-gap: 15px; }
+    .gap-sm-20 {
+      grid-gap: 20px;
+      gap: 20px; }
+    .row-gap-sm-20 {
+      row-gap: 20px; }
+    .column-gap-sm-20 {
+      -webkit-column-gap: 20px;
+         -moz-column-gap: 20px;
+              column-gap: 20px; }
+    .gap-sm-25 {
+      grid-gap: 25px;
+      gap: 25px; }
+    .row-gap-sm-25 {
+      row-gap: 25px; }
+    .column-gap-sm-25 {
+      -webkit-column-gap: 25px;
+         -moz-column-gap: 25px;
+              column-gap: 25px; }
+    .gap-sm-30 {
+      grid-gap: 30px;
+      gap: 30px; }
+    .row-gap-sm-30 {
+      row-gap: 30px; }
+    .column-gap-sm-30 {
+      -webkit-column-gap: 30px;
+         -moz-column-gap: 30px;
+              column-gap: 30px; } }
+  
+@media (min-width: 1025px) {
+    .grid-cols-md-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .col-span-md-1 {
+      grid-column: span 1/span 1; }
+    .grid-cols-md-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .col-span-md-2 {
+      grid-column: span 2/span 2; }
+    .grid-cols-md-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .col-span-md-3 {
+      grid-column: span 3/span 3; }
+    .grid-cols-md-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .col-span-md-4 {
+      grid-column: span 4/span 4; }
+    .grid-cols-md-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .col-span-md-5 {
+      grid-column: span 5/span 5; }
+    .grid-cols-md-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .col-span-md-6 {
+      grid-column: span 6/span 6; }
+    .grid-cols-md-7 {
+      grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .col-span-md-7 {
+      grid-column: span 7/span 7; }
+    .grid-cols-md-8 {
+      grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .col-span-md-8 {
+      grid-column: span 8/span 8; }
+    .grid-cols-md-9 {
+      grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .col-span-md-9 {
+      grid-column: span 9/span 9; }
+    .grid-cols-md-10 {
+      grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .col-span-md-10 {
+      grid-column: span 10/span 10; }
+    .gap-md-5 {
+      grid-gap: 5px;
+      gap: 5px; }
+    .row-gap-md-5 {
+      row-gap: 5px; }
+    .column-gap-md-5 {
+      -webkit-column-gap: 5px;
+         -moz-column-gap: 5px;
+              column-gap: 5px; }
+    .gap-md-10 {
+      grid-gap: 10px;
+      gap: 10px; }
+    .row-gap-md-10 {
+      row-gap: 10px; }
+    .column-gap-md-10 {
+      -webkit-column-gap: 10px;
+         -moz-column-gap: 10px;
+              column-gap: 10px; }
+    .gap-md-15 {
+      grid-gap: 15px;
+      gap: 15px; }
+    .row-gap-md-15 {
+      row-gap: 15px; }
+    .column-gap-md-15 {
+      -webkit-column-gap: 15px;
+         -moz-column-gap: 15px;
+              column-gap: 15px; }
+    .gap-md-20 {
+      grid-gap: 20px;
+      gap: 20px; }
+    .row-gap-md-20 {
+      row-gap: 20px; }
+    .column-gap-md-20 {
+      -webkit-column-gap: 20px;
+         -moz-column-gap: 20px;
+              column-gap: 20px; }
+    .gap-md-25 {
+      grid-gap: 25px;
+      gap: 25px; }
+    .row-gap-md-25 {
+      row-gap: 25px; }
+    .column-gap-md-25 {
+      -webkit-column-gap: 25px;
+         -moz-column-gap: 25px;
+              column-gap: 25px; }
+    .gap-md-30 {
+      grid-gap: 30px;
+      gap: 30px; }
+    .row-gap-md-30 {
+      row-gap: 30px; }
+    .column-gap-md-30 {
+      -webkit-column-gap: 30px;
+         -moz-column-gap: 30px;
+              column-gap: 30px; } }
+  
+@media (min-width: 1200px) {
+    .grid-cols-lg-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .col-span-lg-1 {
+      grid-column: span 1/span 1; }
+    .grid-cols-lg-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .col-span-lg-2 {
+      grid-column: span 2/span 2; }
+    .grid-cols-lg-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .col-span-lg-3 {
+      grid-column: span 3/span 3; }
+    .grid-cols-lg-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .col-span-lg-4 {
+      grid-column: span 4/span 4; }
+    .grid-cols-lg-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .col-span-lg-5 {
+      grid-column: span 5/span 5; }
+    .grid-cols-lg-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .col-span-lg-6 {
+      grid-column: span 6/span 6; }
+    .grid-cols-lg-7 {
+      grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .col-span-lg-7 {
+      grid-column: span 7/span 7; }
+    .grid-cols-lg-8 {
+      grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .col-span-lg-8 {
+      grid-column: span 8/span 8; }
+    .grid-cols-lg-9 {
+      grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .col-span-lg-9 {
+      grid-column: span 9/span 9; }
+    .grid-cols-lg-10 {
+      grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .col-span-lg-10 {
+      grid-column: span 10/span 10; }
+    .gap-lg-5 {
+      grid-gap: 5px;
+      gap: 5px; }
+    .row-gap-lg-5 {
+      row-gap: 5px; }
+    .column-gap-lg-5 {
+      -webkit-column-gap: 5px;
+         -moz-column-gap: 5px;
+              column-gap: 5px; }
+    .gap-lg-10 {
+      grid-gap: 10px;
+      gap: 10px; }
+    .row-gap-lg-10 {
+      row-gap: 10px; }
+    .column-gap-lg-10 {
+      -webkit-column-gap: 10px;
+         -moz-column-gap: 10px;
+              column-gap: 10px; }
+    .gap-lg-15 {
+      grid-gap: 15px;
+      gap: 15px; }
+    .row-gap-lg-15 {
+      row-gap: 15px; }
+    .column-gap-lg-15 {
+      -webkit-column-gap: 15px;
+         -moz-column-gap: 15px;
+              column-gap: 15px; }
+    .gap-lg-20 {
+      grid-gap: 20px;
+      gap: 20px; }
+    .row-gap-lg-20 {
+      row-gap: 20px; }
+    .column-gap-lg-20 {
+      -webkit-column-gap: 20px;
+         -moz-column-gap: 20px;
+              column-gap: 20px; }
+    .gap-lg-25 {
+      grid-gap: 25px;
+      gap: 25px; }
+    .row-gap-lg-25 {
+      row-gap: 25px; }
+    .column-gap-lg-25 {
+      -webkit-column-gap: 25px;
+         -moz-column-gap: 25px;
+              column-gap: 25px; }
+    .gap-lg-30 {
+      grid-gap: 30px;
+      gap: 30px; }
+    .row-gap-lg-30 {
+      row-gap: 30px; }
+    .column-gap-lg-30 {
+      -webkit-column-gap: 30px;
+         -moz-column-gap: 30px;
+              column-gap: 30px; } }
+  
+@media (min-width: 1400px) {
+    .grid-cols-xl-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .col-span-xl-1 {
+      grid-column: span 1/span 1; }
+    .grid-cols-xl-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .col-span-xl-2 {
+      grid-column: span 2/span 2; }
+    .grid-cols-xl-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .col-span-xl-3 {
+      grid-column: span 3/span 3; }
+    .grid-cols-xl-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .col-span-xl-4 {
+      grid-column: span 4/span 4; }
+    .grid-cols-xl-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .col-span-xl-5 {
+      grid-column: span 5/span 5; }
+    .grid-cols-xl-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .col-span-xl-6 {
+      grid-column: span 6/span 6; }
+    .grid-cols-xl-7 {
+      grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .col-span-xl-7 {
+      grid-column: span 7/span 7; }
+    .grid-cols-xl-8 {
+      grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .col-span-xl-8 {
+      grid-column: span 8/span 8; }
+    .grid-cols-xl-9 {
+      grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .col-span-xl-9 {
+      grid-column: span 9/span 9; }
+    .grid-cols-xl-10 {
+      grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .col-span-xl-10 {
+      grid-column: span 10/span 10; }
+    .gap-xl-5 {
+      grid-gap: 5px;
+      gap: 5px; }
+    .row-gap-xl-5 {
+      row-gap: 5px; }
+    .column-gap-xl-5 {
+      -webkit-column-gap: 5px;
+         -moz-column-gap: 5px;
+              column-gap: 5px; }
+    .gap-xl-10 {
+      grid-gap: 10px;
+      gap: 10px; }
+    .row-gap-xl-10 {
+      row-gap: 10px; }
+    .column-gap-xl-10 {
+      -webkit-column-gap: 10px;
+         -moz-column-gap: 10px;
+              column-gap: 10px; }
+    .gap-xl-15 {
+      grid-gap: 15px;
+      gap: 15px; }
+    .row-gap-xl-15 {
+      row-gap: 15px; }
+    .column-gap-xl-15 {
+      -webkit-column-gap: 15px;
+         -moz-column-gap: 15px;
+              column-gap: 15px; }
+    .gap-xl-20 {
+      grid-gap: 20px;
+      gap: 20px; }
+    .row-gap-xl-20 {
+      row-gap: 20px; }
+    .column-gap-xl-20 {
+      -webkit-column-gap: 20px;
+         -moz-column-gap: 20px;
+              column-gap: 20px; }
+    .gap-xl-25 {
+      grid-gap: 25px;
+      gap: 25px; }
+    .row-gap-xl-25 {
+      row-gap: 25px; }
+    .column-gap-xl-25 {
+      -webkit-column-gap: 25px;
+         -moz-column-gap: 25px;
+              column-gap: 25px; }
+    .gap-xl-30 {
+      grid-gap: 30px;
+      gap: 30px; }
+    .row-gap-xl-30 {
+      row-gap: 30px; }
+    .column-gap-xl-30 {
+      -webkit-column-gap: 30px;
+         -moz-column-gap: 30px;
+              column-gap: 30px; } }
+  
+@media (min-width: 1700px) {
+    .grid-cols-xxl-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .col-span-xxl-1 {
+      grid-column: span 1/span 1; }
+    .grid-cols-xxl-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .col-span-xxl-2 {
+      grid-column: span 2/span 2; }
+    .grid-cols-xxl-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .col-span-xxl-3 {
+      grid-column: span 3/span 3; }
+    .grid-cols-xxl-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .col-span-xxl-4 {
+      grid-column: span 4/span 4; }
+    .grid-cols-xxl-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .col-span-xxl-5 {
+      grid-column: span 5/span 5; }
+    .grid-cols-xxl-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .col-span-xxl-6 {
+      grid-column: span 6/span 6; }
+    .grid-cols-xxl-7 {
+      grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .col-span-xxl-7 {
+      grid-column: span 7/span 7; }
+    .grid-cols-xxl-8 {
+      grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .col-span-xxl-8 {
+      grid-column: span 8/span 8; }
+    .grid-cols-xxl-9 {
+      grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .col-span-xxl-9 {
+      grid-column: span 9/span 9; }
+    .grid-cols-xxl-10 {
+      grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .col-span-xxl-10 {
+      grid-column: span 10/span 10; }
+    .gap-xxl-5 {
+      grid-gap: 5px;
+      gap: 5px; }
+    .row-gap-xxl-5 {
+      row-gap: 5px; }
+    .column-gap-xxl-5 {
+      -webkit-column-gap: 5px;
+         -moz-column-gap: 5px;
+              column-gap: 5px; }
+    .gap-xxl-10 {
+      grid-gap: 10px;
+      gap: 10px; }
+    .row-gap-xxl-10 {
+      row-gap: 10px; }
+    .column-gap-xxl-10 {
+      -webkit-column-gap: 10px;
+         -moz-column-gap: 10px;
+              column-gap: 10px; }
+    .gap-xxl-15 {
+      grid-gap: 15px;
+      gap: 15px; }
+    .row-gap-xxl-15 {
+      row-gap: 15px; }
+    .column-gap-xxl-15 {
+      -webkit-column-gap: 15px;
+         -moz-column-gap: 15px;
+              column-gap: 15px; }
+    .gap-xxl-20 {
+      grid-gap: 20px;
+      gap: 20px; }
+    .row-gap-xxl-20 {
+      row-gap: 20px; }
+    .column-gap-xxl-20 {
+      -webkit-column-gap: 20px;
+         -moz-column-gap: 20px;
+              column-gap: 20px; }
+    .gap-xxl-25 {
+      grid-gap: 25px;
+      gap: 25px; }
+    .row-gap-xxl-25 {
+      row-gap: 25px; }
+    .column-gap-xxl-25 {
+      -webkit-column-gap: 25px;
+         -moz-column-gap: 25px;
+              column-gap: 25px; }
+    .gap-xxl-30 {
+      grid-gap: 30px;
+      gap: 30px; }
+    .row-gap-xxl-30 {
+      row-gap: 30px; }
+    .column-gap-xxl-30 {
+      -webkit-column-gap: 30px;
+         -moz-column-gap: 30px;
+              column-gap: 30px; } 
+}
